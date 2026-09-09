@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Akilan S | MBA Graduate | Supply Chain &amp; Logistics Portfolio</title>
+<meta name="description" content="Akilan S — MBA graduate specializing in Supply Chain Management, Logistics Operations, Procurement, Inventory Management, Power BI and Tableau." />
+<meta name="author" content="Akilan S" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="profile" />
+<meta property="og:title" content="Akilan S | MBA Graduate | Supply Chain & Logistics Portfolio" />
+<meta property="og:description" content="MBA graduate specializing in Supply Chain Management, Logistics Operations, Procurement, Inventory Management, Power BI and Tableau." />
+<meta property="og:url" content="https://akilanrajan13-coder.github.io/mba-portflio/" />
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230A0F1C'/%3E%3Ctext x='32' y='40' font-family='Georgia,serif' font-size='24' fill='%23E3A857' text-anchor='middle'%3EAS%3C/text%3E%3C/svg%3E" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --ink:#0A0F1C;
+    --panel:#111A2E;
+    --panel-2:#16203A;
+    --text:#EDEFF5;
+    --muted:#A9B2C8;
+    --accent:#E3A857;
+    --accent-ink:#241705;
+    --steel:#6E93B4;
+    --line:rgba(237,239,245,0.10);
+    --line-soft:rgba(237,239,245,0.06);
+    --radius:10px;
+    --maxw:1080px;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation:none !important; transition:none !important;}
+  }
+
+  body{
+    margin:0;
+    background:var(--ink);
+    color:var(--text);
+    font-family:'IBM Plex Sans', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  h1,h2,h3,h4{
+    font-family:'Space Grotesk', 'IBM Plex Sans', sans-serif;
+    font-weight:600;
+    letter-spacing:-0.01em;
+    margin:0;
+  }
+
+  a{color:inherit;}
+  img{max-width:100%; display:block;}
+
+  a:focus-visible, button:focus-visible{
+    outline:2px solid var(--accent);
+    outline-offset:3px;
+  }
+
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 24px;}
+
+  /* ---------- NAV ---------- */
+  .site-nav{
+    position:sticky; top:0; z-index:80;
+    background:rgba(10,15,28,0.86);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-row{
+    max-width:var(--maxw); margin:0 auto; padding:16px 24px;
+    display:flex; align-items:center; justify-content:space-between;
+  }
+  .brand{
+    display:flex; align-items:center; gap:10px;
+    font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:16px;
+  }
+  .brand-mark{
+    width:34px; height:34px; border-radius:8px;
+    background:var(--accent);
+    color:var(--accent-ink);
+    display:flex; align-items:center; justify-content:center;
+    font-size:14px; font-weight:700; font-family:'Space Grotesk',sans-serif;
+  }
+  .nav-links{
+    display:flex; gap:26px; list-style:none; margin:0; padding:0;
+    font-size:14.5px; color:var(--muted); font-weight:500;
+  }
+  .nav-links a{ padding:4px 0; border-bottom:2px solid transparent; }
+  .nav-links a:hover{ color:var(--text); border-bottom-color:var(--accent); }
+
+  .nav-cta{ display:flex; align-items:center; gap:14px; }
+  .nav-toggle{
+    display:none; background:none; border:1px solid var(--line); border-radius:8px;
+    width:40px; height:40px; color:var(--text); font-size:18px; cursor:pointer;
+  }
+  .mobile-panel{ display:none; }
+
+  @media (max-width: 860px){
+    .nav-links{ display:none; }
+    .nav-toggle{ display:block; }
+    .mobile-panel.open{
+      display:flex; flex-direction:column; gap:2px;
+      padding:8px 24px 18px;
+      border-bottom:1px solid var(--line);
+      background:rgba(10,15,28,0.98);
+    }
+    .mobile-panel a{
+      padding:12px 4px; color:var(--muted); font-size:15px;
+      border-bottom:1px solid var(--line-soft);
+    }
+    .mobile-panel a:hover{ color:var(--text); }
+  }
+
+  /* ---------- BUTTONS ---------- */
+  .btn{
+    display:inline-flex; align-items:center; gap:8px;
+    padding:11px 18px; border-radius:8px;
+    font-size:14.5px; font-weight:600;
+    border:1px solid var(--line);
+    background:transparent; color:var(--text);
+    cursor:pointer; transition:border-color .15s ease, transform .15s ease, background .15s ease;
+    text-decoration:none;
+  }
+  .btn:hover{ border-color:var(--accent); transform:translateY(-1px); }
+  .btn-solid{
+    background:var(--accent); border-color:var(--accent); color:var(--accent-ink);
+  }
+  .btn-solid:hover{ background:#EEBB74; border-color:#EEBB74; }
+  .btn-row{ display:flex; flex-wrap:wrap; gap:12px; }
+
+  /* ---------- SECTION SCAFFOLDING ---------- */
+  section{ padding:76px 0; border-bottom:1px solid var(--line-soft); }
+  section:last-of-type{ border-bottom:none; }
+
+  .eyebrow{
+    font-size:13px; color:var(--steel); font-weight:500; margin:0 0 10px;
+  }
+  .section-head{ max-width:640px; margin-bottom:40px; }
+  .section-head h2{ font-size:28px; margin-bottom:12px; }
+  .section-head p{ color:var(--muted); font-size:15.5px; margin:0; }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    padding:64px 0 60px;
+    display:grid; grid-template-columns:1.15fr 0.85fr; gap:48px; align-items:center;
+  }
+  .status-line{
+    display:inline-flex; align-items:center; gap:8px;
+    font-size:13.5px; color:var(--muted); margin-bottom:18px;
+  }
+  .status-dot{
+    width:7px; height:7px; border-radius:50%; background:var(--accent);
+    box-shadow:0 0 0 4px rgba(227,168,87,0.16);
+  }
+  .hero h1{
+    font-size:clamp(32px, 4.4vw, 46px);
+    line-height:1.12;
+    margin-bottom:16px;
+  }
+  .hero h1 em{ font-style:normal; color:var(--accent); }
+  .hero-role{
+    font-size:16px; color:var(--muted); margin-bottom:14px; font-weight:500;
+  }
+  .hero-summary{
+    color:var(--muted); font-size:15.5px; max-width:54ch; margin-bottom:28px;
+  }
+
+  /* supply chain flow graphic */
+  .flow{
+    display:flex; align-items:center; margin:0 0 30px; overflow-x:auto;
+    padding-bottom:4px;
+  }
+  .flow-node{
+    display:flex; flex-direction:column; align-items:center; gap:8px;
+    flex-shrink:0; min-width:82px;
+  }
+  .flow-dot{
+    width:11px; height:11px; border-radius:50%;
+    background:var(--panel-2); border:2px solid var(--steel);
+  }
+  .flow-node:first-child .flow-dot{ background:var(--accent); border-color:var(--accent); }
+  .flow-label{ font-size:11.5px; color:var(--muted); text-align:center; white-space:nowrap; }
+  .flow-line{ height:2px; flex:1; background:linear-gradient(90deg, var(--steel), var(--line)); min-width:20px; }
+
+  .id-card{
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:28px 24px;
+    position:relative;
+    overflow:hidden;
+  }
+  .id-card::before{
+    content:"";
+    position:absolute; top:0; left:0; right:0; height:4px;
+    background:linear-gradient(90deg, var(--accent), var(--steel));
+  }
+  .id-avatar{
+    width:76px; height:76px; border-radius:12px;
+    background:var(--panel-2);
+    border:1px solid var(--line);
+    display:flex; align-items:center; justify-content:center;
+    font-family:'Space Grotesk',sans-serif; font-size:26px; font-weight:700;
+    color:var(--accent);
+    margin-bottom:16px;
+  }
+  .id-card h3{ font-size:19px; margin-bottom:4px; }
+  .id-card .id-role{ color:var(--muted); font-size:13.5px; margin-bottom:18px; }
+  .id-meta{ display:flex; flex-direction:column; gap:10px; font-size:13.5px; }
+  .id-meta div{ display:flex; justify-content:space-between; gap:10px; border-top:1px solid var(--line-soft); padding-top:10px; }
+  .id-meta span:first-child{ color:var(--muted); }
+  .id-meta span:last-child{ text-align:right; }
+
+  @media (max-width: 860px){
+    .hero{ grid-template-columns:1fr; padding-top:36px; }
+    .id-card{ order:-1; }
+  }
+
+  /* ---------- ABOUT ---------- */
+  .about-grid{ display:grid; grid-template-columns:1.3fr 1fr; gap:40px; align-items:start; }
+  .about-copy p{ color:var(--muted); font-size:15.5px; margin:0 0 16px; max-width:62ch; }
+  .focus-list{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:14px; }
+  .focus-list li{
+    display:flex; gap:12px; align-items:baseline;
+    font-size:14.5px; color:var(--muted);
+    border-top:1px solid var(--line-soft); padding-top:14px;
+  }
+  .focus-list li:first-child{ border-top:none; padding-top:0; }
+  .focus-list strong{ color:var(--text); font-weight:600; min-width:150px; flex-shrink:0; }
+  @media (max-width:860px){ .about-grid{ grid-template-columns:1fr; } }
+
+  /* ---------- SKILLS ---------- */
+  .skill-groups{ display:grid; grid-template-columns:1fr 1fr; gap:32px 48px; }
+  .skill-group h4{
+    font-size:14px; color:var(--steel); font-weight:600; margin-bottom:14px;
+    padding-bottom:10px; border-bottom:1px solid var(--line);
+  }
+  .chip-row{ display:flex; flex-wrap:wrap; gap:8px; }
+  .chip{
+    font-size:13.5px; color:var(--text);
+    background:var(--panel);
+    border:1px solid var(--line);
+    padding:7px 13px; border-radius:7px;
+  }
+  @media (max-width:700px){ .skill-groups{ grid-template-columns:1fr; } }
+
+  /* ---------- TIMELINE (Education / Experience) ---------- */
+  .timeline{ position:relative; padding-left:28px; }
+  .timeline::before{
+    content:""; position:absolute; left:6px; top:6px; bottom:6px; width:1px; background:var(--line);
+  }
+  .t-item{ position:relative; padding-bottom:36px; }
+  .t-item:last-child{ padding-bottom:0; }
+  .t-item::before{
+    content:""; position:absolute; left:-28px; top:4px;
+    width:13px; height:13px; border-radius:3px;
+    background:var(--ink); border:2px solid var(--steel);
+  }
+  .t-item.primary::before{ background:var(--accent); border-color:var(--accent); }
+  .t-head{
+    display:flex; flex-wrap:wrap; justify-content:space-between; gap:10px 20px;
+    margin-bottom:6px;
+  }
+  .t-head h3{ font-size:17px; }
+  .t-when{ font-size:13px; color:var(--steel); font-weight:600; white-space:nowrap; }
+  .t-org{ font-size:14px; color:var(--muted); margin-bottom:10px; }
+  .t-meta{ font-size:13.5px; color:var(--muted); margin-bottom:10px; }
+  .t-badge{
+    display:inline-block; font-size:12px; color:var(--accent);
+    border:1px solid rgba(227,168,87,0.4); border-radius:6px; padding:3px 9px;
+    margin-bottom:10px;
+  }
+  .t-item ul{ margin:8px 0 0; padding-left:18px; color:var(--muted); font-size:14.5px; }
+  .t-item ul li{ margin-bottom:6px; }
+
+  /* ---------- RESEARCH ---------- */
+  .research-panel{
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:36px;
+    display:grid;
+    grid-template-columns:1fr;
+    gap:24px;
+  }
+  .research-badge{
+    display:inline-flex; align-items:center; gap:8px;
+    align-self:flex-start;
+    background:rgba(227,168,87,0.12);
+    color:var(--accent);
+    border:1px solid rgba(227,168,87,0.35);
+    font-size:12.5px; font-weight:600;
+    padding:6px 12px; border-radius:20px;
+    width:fit-content;
+  }
+  .research-panel h3{ font-size:22px; margin:16px 0 6px; max-width:32ch; }
+  .research-meta{ color:var(--muted); font-size:14px; margin-bottom:18px; }
+  .research-body{ display:grid; grid-template-columns:1fr 1fr; gap:28px; }
+  .research-body p{ color:var(--muted); font-size:14.5px; margin:0; }
+  .research-body h5{ font-size:13px; color:var(--steel); margin-bottom:10px; font-weight:600; }
+  .research-body ul{ margin:0; padding-left:18px; color:var(--muted); font-size:14.5px; }
+  .research-body ul li{ margin-bottom:6px; }
+  @media (max-width:700px){ .research-body{ grid-template-columns:1fr; } }
+
+  /* ---------- CERTIFICATIONS ---------- */
+  .cert-grid{ display:grid; grid-template-columns:repeat(2, 1fr); gap:16px; }
+  .cert-ticket{
+    position:relative;
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:20px 22px;
+    display:flex; flex-direction:column; gap:8px;
+  }
+  .cert-ticket::after{
+    content:"";
+    position:absolute; right:0; top:14px; bottom:14px; width:0;
+    border-right:1px dashed var(--line);
+  }
+  .cert-score{
+    position:absolute; top:16px; right:18px;
+    font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:15px;
+    color:var(--accent);
+  }
+  .cert-ticket h4{ font-size:15.5px; padding-right:52px; }
+  .cert-org{ font-size:13px; color:var(--muted); }
+  .cert-date{ font-size:12.5px; color:var(--steel); }
+  @media (max-width:700px){ .cert-grid{ grid-template-columns:1fr; } }
+
+  /* ---------- ACTIVITIES ---------- */
+  .activity-card{
+    background:var(--panel); border:1px solid var(--line); border-radius:10px;
+    padding:22px 24px; max-width:520px;
+    display:flex; gap:16px; align-items:flex-start;
+  }
+  .activity-icon{
+    width:38px; height:38px; border-radius:8px; flex-shrink:0;
+    background:var(--panel-2); border:1px solid var(--line);
+    display:flex; align-items:center; justify-content:center; color:var(--accent);
+  }
+  .activity-card h4{ font-size:15.5px; margin-bottom:4px; }
+  .activity-card p{ font-size:14px; color:var(--muted); margin:0; }
+
+  /* ---------- CONTACT ---------- */
+  .contact-grid{ display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+  .contact-card{
+    background:var(--panel); border:1px solid var(--line); border-radius:12px;
+    padding:22px 24px;
+  }
+  .contact-card h4{ font-size:14px; color:var(--steel); margin-bottom:6px; font-weight:600; }
+  .contact-card a.contact-value{
+    display:block; font-size:16px; font-weight:600; color:var(--text);
+    margin-bottom:16px; text-decoration:none;
+  }
+  .contact-card a.contact-value:hover{ color:var(--accent); }
+  @media (max-width:700px){ .contact-grid{ grid-template-columns:1fr; } }
+
+  /* ---------- WHATSAPP ---------- */
+  .whatsapp-fab{
+    position:fixed; bottom:22px; right:22px; z-index:90;
+    display:flex; align-items:center; gap:8px;
+    background:#1F9E5A; color:#fff;
+    padding:12px 16px; border-radius:999px;
+    font-size:13.5px; font-weight:600;
+    box-shadow:0 12px 28px rgba(0,0,0,0.45);
+    text-decoration:none;
+  }
+  .whatsapp-fab:hover{ background:#1a8a4e; }
+
+  /* ---------- FOOTER ---------- */
+  footer{
+    padding:32px 0 90px;
+    text-align:center;
+    color:var(--muted);
+    font-size:13.5px;
+  }
+  footer a{ color:var(--steel); text-decoration:none; }
+  footer a:hover{ color:var(--accent); }
+
+  /* scroll reveal (single orchestrated pass) */
+  .reveal{ opacity:0; transform:translateY(14px); transition:opacity .5s ease, transform .5s ease; }
+  .reveal.in{ opacity:1; transform:none; }
+</style>
+</head>
+<body>
+
+<a href="https://wa.me/919345583017" target="_blank" rel="noopener" class="whatsapp-fab" aria-label="Message Akilan on WhatsApp">
+  WhatsApp Me
+</a>
+
+<header class="site-nav">
+  <div class="nav-row">
+    <a href="#home" class="brand">
+      <span class="brand-mark">AS</span>
+      Akilan S
+    </a>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#research">Research Project</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#activities">Activities</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">☰</button>
+    </div>
+  </div>
+  <nav class="mobile-panel" id="mobilePanel">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#education">Education</a>
+    <a href="#experience">Experience</a>
+    <a href="#research">Research Project</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#activities">Activities</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main class="wrap">
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div>
+      <div class="status-line"><span class="status-dot"></span> Open to work — Supply Chain &amp; Logistics roles</div>
+      <h1>Hi, I'm Akilan S</h1>
+      <p class="hero-role">MBA Graduate — Supply Chain &amp; Operations</p>
+
+      <div class="flow" aria-hidden="true">
+        <div class="flow-node"><span class="flow-dot"></span><span class="flow-label">Procurement</span></div>
+        <div class="flow-line"></div>
+        <div class="flow-node"><span class="flow-dot"></span><span class="flow-label">Inventory</span></div>
+        <div class="flow-line"></div>
+        <div class="flow-node"><span class="flow-dot"></span><span class="flow-label">Warehousing</span></div>
+        <div class="flow-line"></div>
+        <div class="flow-node"><span class="flow-dot"></span><span class="flow-label">Transportation</span></div>
+        <div class="flow-line"></div>
+        <div class="flow-node"><span class="flow-dot"></span><span class="flow-label">Delivery</span></div>
+      </div>
+
+      <p class="hero-summary">
+        MBA graduate specializing in Supply Chain Management and Systems Management, with hands-on exposure to logistics operations, digital payment systems, and data analysis. Certified in Business Analytics &amp; Data Visualization using Power BI &amp; Tableau (94%), and a research paper presenter at a national conference on digital payment adoption in retail supply chains. Seeking opportunities in Supply Chain, Procurement, Logistics, Inventory Management, and Supply Chain Operations.
+      </p>
+
+      <div class="btn-row">
+        <a class="btn btn-solid" href="Akilan_S_Resume.pdf" download>Download Resume</a>
+        <a class="btn" href="#research">View My Projects</a>
+        <a class="btn" href="https://www.linkedin.com/in/aklian-s-571799330" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn" href="#contact">Contact Me</a>
+      </div>
+    </div>
+
+    <aside class="id-card">
+      <div class="id-avatar">AS</div>
+      <h3>Akilan S</h3>
+      <p class="id-role">MBA Graduate · Supply Chain &amp; Operations</p>
+      <div class="id-meta">
+        <div><span>Location</span><span>Virudhunagar, Tamil Nadu, India</span></div>
+        <div><span>Institution</span><span>CIET, Anna University</span></div>
+        <div><span>Focus</span><span>Supply Chain &amp; Logistics</span></div>
+        <div><span>Status</span><span>Open to work</span></div>
+      </div>
+    </aside>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="reveal">
+    <div class="section-head">
+      <p class="eyebrow">About</p>
+      <h2>A supply chain mindset, built through study and practice</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-copy">
+        <p>
+          I completed my MBA at Coimbatore Institute of Engineering and Technology (Anna University), specializing in Systems Management and Operations &amp; Supply Chain Management. My coursework and internship experience have centered on how goods, information, and payments move through a supply chain — from procurement and warehousing to transportation and last-mile delivery.
+        </p>
+        <p>
+          During my internship at ABT Limited, I worked directly with logistics operations, warehouse coordination, and transportation management, which gave me a practical view of how supply chain theory plays out on the ground. I also presented a research paper at the CIETM-2026 National Conference on how digital payment adoption is reshaping retail supply chain operations, combining survey data with statistical analysis to draw operational insights.
+        </p>
+        <p>
+          I'm looking to bring this combination of academic grounding and hands-on exposure to a Supply Chain, Procurement, Logistics, or Inventory Management role.
+        </p>
+      </div>
+      <ul class="focus-list">
+        <li><strong>Specialization</strong> Systems Management, Operations &amp; Supply Chain Management</li>
+        <li><strong>Practical exposure</strong> Logistics operations, warehouse coordination, transportation management</li>
+        <li><strong>Analytics</strong> Power BI &amp; Tableau, certified with a 94% score</li>
+        <li><strong>Research</strong> National conference presenter, CIETM-2026</li>
+        <li><strong>Looking for</strong> Supply Chain, Procurement, Logistics &amp; Inventory Management roles</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="reveal">
+    <div class="section-head">
+      <p class="eyebrow">Skills</p>
+      <h2>What I bring to a supply chain team</h2>
+    </div>
+    <div class="skill-groups">
+      <div class="skill-group">
+        <h4>Supply Chain &amp; Operations</h4>
+        <div class="chip-row">
+          <span class="chip">Supply Chain Management</span>
+          <span class="chip">Logistics Operations</span>
+          <span class="chip">Procurement</span>
+          <span class="chip">Inventory Management</span>
+          <span class="chip">Warehouse Coordination</span>
+          <span class="chip">Transportation Management</span>
+          <span class="chip">Process Improvement</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h4>Data &amp; Analytics</h4>
+        <div class="chip-row">
+          <span class="chip">Power BI</span>
+          <span class="chip">Tableau</span>
+          <span class="chip">Data Analysis</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h4>Technical Tools</h4>
+        <div class="chip-row">
+          <span class="chip">MS Excel</span>
+          <span class="chip">MS Word</span>
+          <span class="chip">PowerPoint</span>
+          <span class="chip">Canva</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h4>Soft Skills &amp; Languages</h4>
+        <div class="chip-row">
+          <span class="chip">Communication</span>
+          <span class="chip">Teamwork</span>
+          <span class="chip">Problem Solving</span>
+          <span class="chip">Time Management</span>
+          <span class="chip">Adaptability</span>
+          <span class="chip">Tamil</span>
+          <span class="chip">English</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education" class="reveal">
+    <div class="section-head">
+      <p class="eyebrow">Education</p>
+      <h2>Academic background</h2>
+    </div>
+    <div class="timeline">
+      <div class="t-item primary">
+        <div class="t-head">
+          <h3>Master of Business Administration (MBA)</h3>
+          <span class="t-when">2024 – 2026</span>
+        </div>
+        <div class="t-org">Coimbatore Institute of Engineering and Technology (CIET), Anna University, Chennai</div>
+        <div class="t-meta">CGPA: 7.18 / 10 · Specialization: Systems Management, Operations &amp; Supply Chain Management</div>
+      </div>
+      <div class="t-item">
+        <div class="t-head">
+          <h3>Bachelor of Commerce with Computer Applications (B.Com CA)</h3>
+          <span class="t-when">2021 – 2024</span>
+        </div>
+        <div class="t-org">V.H.N. Senthikumara Nadar College (Autonomous), Madurai Kamaraj University, Virudhunagar</div>
+        <div class="t-meta">CGPA: 6.66</div>
+      </div>
+      <div class="t-item">
+        <div class="t-head">
+          <h3>Higher Secondary Certificate (HSC)</h3>
+          <span class="t-when">2020 – 2021</span>
+        </div>
+        <div class="t-org">G.H.S.S Muthuramalingapuram, State Board</div>
+        <div class="t-meta">Score: 77.5%</div>
+      </div>
+      <div class="t-item">
+        <div class="t-head">
+          <h3>SSLC</h3>
+          <span class="t-when">2018 – 2019</span>
+        </div>
+        <div class="t-org">Government Higher Secondary School, Tamil Nadu</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="reveal">
+    <div class="section-head">
+      <p class="eyebrow">Experience</p>
+      <h2>Internship</h2>
+    </div>
+    <div class="timeline">
+      <div class="t-item primary">
+        <div class="t-head">
+          <h3>Logistics Operations Intern</h3>
+          <span class="t-when">October 2025 – November 2025</span>
+        </div>
+        <div class="t-org">ABT Limited, Coimbatore, Tamil Nadu</div>
+        <ul>
+          <li>Gained practical exposure to end-to-end logistics operations, warehouse coordination, and transportation management.</li>
+          <li>Built a working understanding of inventory handling within a live logistics environment.</li>
+          <li>Worked within a corporate team, strengthening professional communication.</li>
+          <li>Developed cross-functional teamwork and operational problem-solving skills.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESEARCH PROJECT -->
+  <section id="research" class="reveal">
+    <div class="section-head">
+      <p class="eyebrow">Research Project</p>
+      <h2>Conference-presented research</h2>
+    </div>
+    <div class="research-panel">
+      <span class="research-badge">National Conference Presentation</span>
+      <div>
+        <h3>Digital Payment Adoption &amp; Its Effect on Retail Supply Chain Operations</h3>
+        <div class="research-meta">Presented at CIETM-2026 National Conference, CIET, Coimbatore · May 2026 · ISBN: 978-81-973273-0-8</div>
+      </div>
+      <div class="research-body">
+        <div>
+          <h5>Study focus</h5>
+          <p>Studied digital payment adoption patterns and their impact on retail supply chain efficiency and customer satisfaction.</p>
+        </div>
+        <div>
+          <h5>Methodology</h5>
+          <ul>
+            <li>Structured survey methodology</li>
+            <li>Statistical analysis</li>
+            <li>Analysis of operational insights</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section id="certifications" class="reveal">
+    <div class="section-head">
+      <p class="eyebrow">Certifications</p>
+      <h2>Courses &amp; certifications</h2>
+    </div>
+    <div class="cert-grid">
+      <div class="cert-ticket">
+        <span class="cert-score">94%</span>
+        <h4>Business Analytics &amp; Data Visualization — Power BI &amp; Tableau</h4>
+        <div class="cert-org">Brainswig Edutech Pvt Ltd., in association with CIET, Coimbatore · 35 hours</div>
+        <div class="cert-date">September 2025</div>
+      </div>
+      <div class="cert-ticket">
+        <h4>Fundamentals of Digital Marketing</h4>
+        <div class="cert-org">Google Digital Garage</div>
+        <div class="cert-date">September 2024</div>
+      </div>
+      <div class="cert-ticket">
+        <h4>Essentials of Digital Marketing</h4>
+        <div class="cert-org">UniAthena &amp; Cambridge International Qualifications</div>
+      </div>
+      <div class="cert-ticket">
+        <h4>Essentials of MS Excel — Formulas and Functions</h4>
+        <div class="cert-org">UniAthena &amp; Cambridge International Qualifications</div>
+      </div>
+      <div class="cert-ticket">
+        <span class="cert-score">96%</span>
+        <h4>Value-Added Course: Mathematics for Competitive Examinations</h4>
+        <div class="cert-org">CIET, Coimbatore</div>
+      </div>
+      <div class="cert-ticket">
+        <span class="cert-score">68%</span>
+        <h4>Value-Added Course: Business Communication — Etiquette, Letters &amp; Reports</h4>
+        <div class="cert-org">CIET, Coimbatore</div>
+        <div class="cert-date">2024–25</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACTIVITIES -->
+  <section id="activities" class="reveal">
+    <div class="section-head">
+      <p class="eyebrow">Activities</p>
+      <h2>Extracurricular</h2>
+    </div>
+    <div class="activity-card">
+      <div class="activity-icon" aria-hidden="true">✓</div>
+      <div>
+        <h4>NSS Camp Participant</h4>
+        <p>7-Day National Service Scheme Camp — V.H.N. Senthikumara Nadar College (Autonomous)</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="reveal">
+    <div class="section-head">
+      <p class="eyebrow">Contact</p>
+      <h2>Let's connect</h2>
+      <p>Open to Supply Chain, Procurement, Logistics, and Inventory Management opportunities — reach out any time.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <h4>Email</h4>
+        <a class="contact-value" href="mailto:akilanrajan13@gmail.com">akilanrajan13@gmail.com</a>
+        <h4>Phone</h4>
+        <a class="contact-value" href="tel:+919345583017">+91 93455 83017</a>
+        <h4>Location</h4>
+        <a class="contact-value" style="cursor:default;">Virudhunagar, Tamil Nadu, India</a>
+      </div>
+      <div class="contact-card">
+        <h4 style="margin-bottom:14px;">Quick actions</h4>
+        <div class="btn-row" style="flex-direction:column; align-items:stretch;">
+          <a class="btn btn-solid" href="mailto:akilanrajan13@gmail.com">Email Me</a>
+          <a class="btn" href="tel:+919345583017">Call Me</a>
+          <a class="btn" href="https://www.linkedin.com/in/aklian-s-571799330" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  © <span id="year">2026</span> Akilan S | MBA | Supply Chain &amp; Operations ·
+  <a href="mailto:akilanrajan13@gmail.com">akilanrajan13@gmail.com</a>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const navToggle = document.getElementById('navToggle');
+  const mobilePanel = document.getElementById('mobilePanel');
+  navToggle.addEventListener('click', () => {
+    const isOpen = mobilePanel.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    navToggle.textContent = isOpen ? '✕' : '☰';
+  });
+  mobilePanel.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      mobilePanel.classList.remove('open');
+      navToggle.textContent = '☰';
+      navToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  const revealEls = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => io.observe(el));
+  } else {
+    revealEls.forEach(el => el.classList.add('in'));
+  }
+</script>
+
+</body>
+</html>
